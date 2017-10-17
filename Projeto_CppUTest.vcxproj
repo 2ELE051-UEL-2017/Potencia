@@ -88,10 +88,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -145,12 +147,57 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClCompile Include="CppUTest\CommandLineArguments.cpp" />
+    <ClCompile Include="CppUTest\CommandLineTestRunner.cpp" />
+    <ClCompile Include="CppUTest\JUnitTestOutput.cpp" />
+    <ClCompile Include="CppUTest\MemoryLeakDetector.cpp" />
+    <ClCompile Include="CppUTest\MemoryLeakWarningPlugin.cpp" />
+    <ClCompile Include="CppUTest\SimpleMutex.cpp" />
+    <ClCompile Include="CppUTest\SimpleString.cpp" />
+    <ClCompile Include="CppUTest\TeamCityTestOutput.cpp" />
+    <ClCompile Include="CppUTest\TestFailure.cpp" />
+    <ClCompile Include="CppUTest\TestFilter.cpp" />
+    <ClCompile Include="CppUTest\TestHarness_c.cpp" />
+    <ClCompile Include="CppUTest\TestMemoryAllocator.cpp" />
+    <ClCompile Include="CppUTest\TestOutput.cpp" />
+    <ClCompile Include="CppUTest\TestPlugin.cpp" />
+    <ClCompile Include="CppUTest\TestRegistry.cpp" />
+    <ClCompile Include="CppUTest\TestResult.cpp" />
+    <ClCompile Include="CppUTest\TestTestingFixture.cpp" />
+    <ClCompile Include="CppUTest\Utest.cpp" />
+    <ClCompile Include="CppUTest\UtestPlatform.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="projeto.c" />
+    <ClCompile Include="tests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Projeto_CppUTest.cpp" />
-    <ClCompile Include="stdafx.cpp" />
+    <ClInclude Include="CppUTest\CommandLineArguments.h" />
+    <ClInclude Include="CppUTest\CommandLineTestRunner.h" />
+    <ClInclude Include="CppUTest\CppUTestConfig.h" />
+    <ClInclude Include="CppUTest\CppUTestGeneratedConfig.h" />
+    <ClInclude Include="CppUTest\JUnitTestOutput.h" />
+    <ClInclude Include="CppUTest\MemoryLeakDetector.h" />
+    <ClInclude Include="CppUTest\MemoryLeakDetectorMallocMacros.h" />
+    <ClInclude Include="CppUTest\MemoryLeakDetectorNewMacros.h" />
+    <ClInclude Include="CppUTest\MemoryLeakWarningPlugin.h" />
+    <ClInclude Include="CppUTest\PlatformSpecificFunctions.h" />
+    <ClInclude Include="CppUTest\PlatformSpecificFunctions_c.h" />
+    <ClInclude Include="CppUTest\SimpleMutex.h" />
+    <ClInclude Include="CppUTest\SimpleString.h" />
+    <ClInclude Include="CppUTest\StandardCLibrary.h" />
+    <ClInclude Include="CppUTest\TeamCityTestOutput.h" />
+    <ClInclude Include="CppUTest\TestFailure.h" />
+    <ClInclude Include="CppUTest\TestFilter.h" />
+    <ClInclude Include="CppUTest\TestHarness.h" />
+    <ClInclude Include="CppUTest\TestHarness_c.h" />
+    <ClInclude Include="CppUTest\TestMemoryAllocator.h" />
+    <ClInclude Include="CppUTest\TestOutput.h" />
+    <ClInclude Include="CppUTest\TestPlugin.h" />
+    <ClInclude Include="CppUTest\TestRegistry.h" />
+    <ClInclude Include="CppUTest\TestResult.h" />
+    <ClInclude Include="CppUTest\TestTestingFixture.h" />
+    <ClInclude Include="CppUTest\Utest.h" />
+    <ClInclude Include="CppUTest\UtestMacros.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
